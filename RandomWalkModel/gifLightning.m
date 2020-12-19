@@ -4,7 +4,7 @@ clf
 plotRayo = figure(1);
 set(gca,'Color','black')
 axis([-30 30 0 h])
-filename = 'rayo.gif';
+filename = 'rayo2.gif';
 for n = 1:paso-1
     hold on
     for j=1:nRayos

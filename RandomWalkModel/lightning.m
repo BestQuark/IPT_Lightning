@@ -5,14 +5,14 @@
 %%PARAMETERS
 
 %h is the height and n the max number of steps 
-h = 30;
-n = 50;
+h = 50;
+n = 1000;
 
 %bifurcation sigma
 bifurSigma = 0.01;
 
 %alet sigma
-aleatSigma = 0.22;
+aleatSigma = 0.1;
 
 %%----------------------------------------
 directions = zeros(1,n);
@@ -27,7 +27,7 @@ for i=2:n
         rayosAct = nRayos;
         for j=1:rayosAct
             %Probability of bifurcation?? como deberia ser?
-            if rand<0.5/nRayos
+            if rand<0.1/nRayos
                 p=normrnd(0,bifurSigma);
                 nRayos = nRayos+1;
                 Rayos(nRayos).directions = Rayos(j).directions; 
