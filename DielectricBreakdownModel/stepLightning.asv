@@ -159,9 +159,11 @@ d = 0.1;
         posibleBreak = posibleBreak.^eta;
         posibleBreak = posibleBreak/sum(sum(sum(posibleBreak)));
 
+        %ARRREGLAR ESTO!!!!!! XXXXXXXXXXXXXXXXXXXXXXXXX ELEGIR NUEVO
+        %RAYO!!!
         weigths = posibleBreak(:);
         nuevoP = randsample(puntosX*puntosY*puntosZ,1,true,weigths);
-        latticeRay(rem(rem(nuevoP,puntosX*puntosY),puntosX), fix(rem(nuevoP,puntosX*puntosY)/puntosX)+1, fix(nuevoP/(puntosX*puntosY))+1) = voltMax;
+        latticeRay(rem(rem(nuevoP,puntosX*puntosY),puntosX), fix(rem(nuevoP,puntosX*puntosY)/puntosX)+1, fix(nuevoP/(puntosX*puntosY))) = voltMax;
 
     else
         fprintf("# de dimensiones invalido")
